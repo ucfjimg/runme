@@ -1,0 +1,15 @@
+This is just a short demo program showing how to run a child process
+for grading or judging in a competitive programming contest.
+
+The child program can be run with no input, or handed a file to
+read from stdin. It will also be run with a timeout of 2 seconds.
+
+The input will be collected via a pipe from the child's stdout,
+and could then be compared against test case output.
+
+wait(2) is used to determine if the child timed out, crashed
+(seg fault or bus error), or exited successfully.
+
+runme.c is the wraper to run the child; all other c files are 
+short programs to test the various functions. test.sh will compile
+and run everything.
